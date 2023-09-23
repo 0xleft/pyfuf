@@ -2,6 +2,8 @@
 
 ## Install!
 
+## ZERO PREINSTALLED DEPENDENCIES 👀
+
 ```bash
 pip install pyfuf
 ```
