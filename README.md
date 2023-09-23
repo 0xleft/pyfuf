@@ -23,6 +23,9 @@ There is a good example in (example.py)[example.py]
 import pyfuf
 
 # command builder
+args = pyfuf.FuffCommandBuilder(starting_dir="/FUZZ.php")
+args.set_url("http://localhost")
+args.set_wordlist("wordlist.txt")
 
 # start fuzzing
 pyfuf.fuzz(args, lambda x: print(pyfuf.parse_finding_line(x)))
