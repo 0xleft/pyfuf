@@ -3,3 +3,6 @@ fuff
 fuff.exe
 wordlist.txt
 *.pyc
+dist/*
+build/*
+pyfuff.egg-info/*
