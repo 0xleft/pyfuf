@@ -9,9 +9,13 @@ def callback(line):
         print(finding)
 
 # arguments for fuff
-args = pyfuf.FuffCommandBuilder(starting_dir="/FUZZ.php")
-args.set_url("http://localhost")
+args = pyfuf.FuffCommandBuilder()
+args.set_target("http://localhost/FUZZ.php")
 args.set_wordlist("wordlist.txt")
+args.set_method("GET")
+args.set_user_agent("PyFuf")
+args.follow_redirects()
+args.ignore_wordlist_comments()
 
 # start fuzzing
 pyfuf.fuzz(args, callback)
